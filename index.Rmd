@@ -101,7 +101,7 @@ par(mfrow = c(2, 4), mar = c(1,1,1,1))
 plot(point, main = "POINT", col = "blue", cex = 1.8, lwd = 2)
 plot(linestring, main = "LINESTRING", col = "blue", lwd = 2)
 plot(polygon, main = "POLYGON", border = "blue", col = "#0000FF33", lwd = 2)
-plot(1, type="n", axes=F, xlab="", ylab="")
+plot(1, type = "n", axes = F, xlab = "", ylab = "")
 plot(multipoint, main = "MULTIPOINT", col = "blue", cex = 1.8, lwd = 2)
 plot(multilinestring, main = "MULTILINESTRING", col = "blue", lwd = 2)
 plot(multipolygon, main = "MULTIPOLYGON", border = "blue", col = "#0000FF33", lwd = 2)
@@ -130,7 +130,7 @@ knitr::include_graphics("img/oryxpaper.png")
 # Read in spatial data
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
-studysites_raw <- st_read("shp/bearpyrenees.shp")
+studysites_raw <- st_read("../shp/bearpyrenees.shp")
 ```
 
 ---
@@ -235,7 +235,7 @@ class: inverse, middle, center
 # Read in data
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
-clc2012 <- st_read("shp/CLC12_FR_RGF.shp")
+clc2012 <- st_read("../shp/CLC12_FR_RGF.shp")
 ```
 
 ---
@@ -448,8 +448,9 @@ mapview(covariates, zcol = "forestcover", map.types = "OpenTopoMap") #<<
 # Human density
 
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
-url.france_pop <- url("https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/datasets/france_population_data_2016.RData")
-load(url.france_pop)
+# url.france_pop <- url("https://vrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com/wp-content/datasets/france_population_data_2016.RData")
+# load(url.france_pop)
+load("../shp/france_population_data_2016.RData")
 glimpse(df.france)
 ```
 
@@ -559,7 +560,7 @@ class: inverse, middle, center
 
 # Read in data
 ```{r message=FALSE, warning=FALSE, paged.print=FALSE}
-roads <- st_read("shp/TRONCON_ROUTE.shp")
+roads <- st_read("../shp/TRONCON_ROUTE.shp")
 ```
 
 ---
@@ -716,7 +717,7 @@ class: inverse, middle, center
 ## All `sf` methods
 
 ```{r, echo=FALSE}
-methods(class='sf')
+methods(class = 'sf')
 ```
 
 
@@ -769,10 +770,8 @@ background-position: 9% 15%
 ### Credits: I used material from @StrimasMackey, @jafflerbach, @StatnMap, @SharpSightLabs and @edzerpebesma 
 
 
-|                                                                                                            |                                   |
-| :--------------------------------------------------------------------------------------------------------- | :-------------------------------- |
-| `r icon::fa("envelope")` | **olivier.gimenez@cefe.cnrs.fr**       |
-| `r icon::fa("home")` | [**https://oliviergimenez.github.io/**](https://oliviergimenez.github.io/) |
-| `r icon::fa_twitter()` | [**@oaggimenez**](https://twitter.com/oaggimenez)                         |
-| `r icon::fa_github()` | [**@oliviergimenez**](https://github.com/oliviergimenez)
+| email: | **olivier.gimenez@cefe.cnrs.fr**       |
+| Website: [**https://oliviergimenez.github.io/**](https://oliviergimenez.github.io/) |
+| Twitter: [**@oaggimenez**](https://twitter.com/oaggimenez)                         |
+| Github [**@oliviergimenez**](https://github.com/oliviergimenez)
 
