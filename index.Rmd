@@ -22,7 +22,6 @@ knitr::opts_chunk$set(fig.align = "center",
                       cache = FALSE)
 ```
 
----
 class: inverse, middle, center
 # Simple Features for R: the sf package
 
