@@ -1,6 +1,6 @@
 ---
-title: "GIS and mapping in R"
-subtitle: "Introduction to the sf package"
+title: "Geographic Information Systems and mapping in R"
+subtitle: "Introduction to the sf package, for DSCI351/353 class"
 author: "Olivier Gimenez"
 date: "2020-10-30"
 output:
@@ -18,15 +18,40 @@ options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(fig.align = "center", 
                       message = FALSE, 
                       warning = FALSE, 
-                      paged.print = FALSE)
+                      paged.print = FALSE,
+                      cache = FALSE)
 ```
 
-
+---
+class: inverse, middle, center
 # Simple Features for R: the sf package
 
 ```{r echo = FALSE, out.width = "700px"}
 knitr::include_graphics("img/sfcartoon.jpg")
 ```
+
+---
+## Olivier Gimenez, and the description file of the sf package
+
+Olivier Gimenez is a scientist 
+
+  * at the [French National Centre for Scientific Research (CNRS)](https://www.cnrs.fr/en/cnrs)
+
+Support for simple features, 
+
+* a standardized way to encode spatial vector data. 
+
+* Binds to 'GDAL' for reading and writing data, 
+
+* to 'GEOS' for geometrical operations, and 
+
+* to 'PROJ' for projection conversions and datum transformations. 
+
+* Optionally uses the 's2' package for spherical geometry operations on geographic coordinates.
+
+Author: Edzer Pebesma, Roger Bivand, Etienne Racine, Michael Sumner,
+  Ian Cook, Tim Keitt, Robin Lovelace, Hadley Wickham, Jeroen Ooms, 
+  Kirill Müller, Thomas Lin Pedersen, Dan Baston 
 
 ---
 class: inverse, middle, center
